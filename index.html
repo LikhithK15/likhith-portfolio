@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Mono:wght@400;500&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
- 
+
 <style>
   :root {
     --ink: #0e0d0b;
@@ -22,11 +22,11 @@
     --border: rgba(200,191,173,0.2);
     --border-strong: rgba(200,191,173,0.4);
   }
- 
+
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
- 
+
   html { scroll-behavior: smooth; }
- 
+
   body {
     background: var(--ink);
     color: var(--cream);
@@ -35,7 +35,7 @@
     line-height: 1.7;
     overflow-x: hidden;
   }
- 
+
   /* ── NOISE TEXTURE OVERLAY ── */
   body::before {
     content: '';
@@ -46,7 +46,7 @@
     z-index: 1000;
     opacity: 0.4;
   }
- 
+
   /* ── NAV ── */
   nav {
     position: fixed;
@@ -62,7 +62,7 @@
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
   }
- 
+
   .nav-logo {
     font-family: 'DM Mono', monospace;
     font-size: 13px;
@@ -71,13 +71,13 @@
     text-transform: uppercase;
     text-decoration: none;
   }
- 
+
   .nav-links {
     display: flex;
     gap: 2.5rem;
     list-style: none;
   }
- 
+
   .nav-links a {
     font-family: 'DM Mono', monospace;
     font-size: 12px;
@@ -87,9 +87,9 @@
     text-decoration: none;
     transition: color 0.2s;
   }
- 
+
   .nav-links a:hover { color: var(--cream); }
- 
+
   /* ── HERO ── */
   #hero {
     min-height: 100vh;
@@ -101,7 +101,7 @@
     border-bottom: 1px solid var(--border);
     overflow: hidden;
   }
- 
+
   .hero-rule-top {
     position: absolute;
     top: 6rem;
@@ -110,7 +110,7 @@
     height: 1px;
     background: var(--border-strong);
   }
- 
+
   .hero-eyebrow {
     font-family: 'DM Mono', monospace;
     font-size: 11px;
@@ -121,7 +121,7 @@
     opacity: 0;
     animation: fadeUp 0.8s ease 0.2s forwards;
   }
- 
+
   .hero-headline {
     font-family: 'Playfair Display', Georgia, serif;
     font-size: clamp(3.5rem, 8vw, 7.5rem);
@@ -133,12 +133,12 @@
     opacity: 0;
     animation: fadeUp 0.8s ease 0.35s forwards;
   }
- 
+
   .hero-headline em {
     font-style: italic;
     color: var(--gold-light);
   }
- 
+
   .hero-sub {
     font-family: 'Lora', serif;
     font-size: 1.1rem;
@@ -149,7 +149,7 @@
     opacity: 0;
     animation: fadeUp 0.8s ease 0.5s forwards;
   }
- 
+
   .hero-cta {
     display: flex;
     gap: 1.25rem;
@@ -157,7 +157,7 @@
     opacity: 0;
     animation: fadeUp 0.8s ease 0.65s forwards;
   }
- 
+
   .btn-primary {
     font-family: 'DM Mono', monospace;
     font-size: 12px;
@@ -172,9 +172,9 @@
     transition: background 0.2s;
     font-weight: 500;
   }
- 
+
   .btn-primary:hover { background: var(--gold-light); }
- 
+
   .btn-secondary {
     font-family: 'DM Mono', monospace;
     font-size: 12px;
@@ -188,9 +188,9 @@
     cursor: pointer;
     transition: border-color 0.2s, color 0.2s;
   }
- 
+
   .btn-secondary:hover { border-color: var(--cream); }
- 
+
   .hero-bottom {
     position: absolute;
     bottom: 3rem;
@@ -200,11 +200,11 @@
     justify-content: space-between;
     align-items: flex-end;
   }
- 
+
   .hero-stat {
     text-align: right;
   }
- 
+
   .hero-stat-num {
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
@@ -212,7 +212,7 @@
     color: var(--gold-light);
     line-height: 1;
   }
- 
+
   .hero-stat-label {
     font-family: 'DM Mono', monospace;
     font-size: 10px;
@@ -221,7 +221,7 @@
     color: var(--cream-mid);
     margin-top: 0.3rem;
   }
- 
+
   .hero-scroll {
     font-family: 'DM Mono', monospace;
     font-size: 10px;
@@ -232,14 +232,14 @@
     align-items: center;
     gap: 0.75rem;
   }
- 
+
   .hero-scroll::after {
     content: '';
     width: 40px;
     height: 1px;
     background: var(--cream-mid);
   }
- 
+
   /* ── LARGE DECORATIVE NUMBER ── */
   .hero-deco {
     position: absolute;
@@ -255,13 +255,13 @@
     pointer-events: none;
     user-select: none;
   }
- 
+
   /* ── SECTIONS ── */
   section {
     padding: 6rem 4rem;
     border-bottom: 1px solid var(--border);
   }
- 
+
   .section-label {
     font-family: 'DM Mono', monospace;
     font-size: 10px;
@@ -273,14 +273,14 @@
     align-items: center;
     gap: 1rem;
   }
- 
+
   .section-label::after {
     content: '';
     flex: 1;
     height: 1px;
     background: var(--border);
   }
- 
+
   h2 {
     font-family: 'Playfair Display', serif;
     font-size: clamp(2.2rem, 4vw, 3.5rem);
@@ -289,12 +289,12 @@
     color: var(--cream);
     letter-spacing: -0.01em;
   }
- 
+
   h2 em {
     font-style: italic;
     color: var(--gold-light);
   }
- 
+
   /* ── ABOUT ── */
   #about .about-grid {
     display: grid;
@@ -303,11 +303,11 @@
     margin-top: 3rem;
     align-items: start;
   }
- 
+
   .about-photo-wrap {
     position: relative;
   }
- 
+
   .about-photo-wrap img {
     width: 100%;
     aspect-ratio: 3/4;
@@ -315,7 +315,7 @@
     object-position: top center;
     filter: grayscale(20%) contrast(1.05);
   }
- 
+
   .about-photo-frame {
     position: absolute;
     inset: -12px;
@@ -323,7 +323,7 @@
     pointer-events: none;
     z-index: -1;
   }
- 
+
   .about-photo-label {
     position: absolute;
     bottom: -1.5rem;
@@ -334,19 +334,19 @@
     text-transform: uppercase;
     color: var(--gold);
   }
- 
+
   .about-text p {
     color: var(--cream-warm);
     font-size: 1.05rem;
     line-height: 1.8;
     margin-bottom: 1.5rem;
   }
- 
+
   .about-text p strong {
     color: var(--cream);
     font-weight: 600;
   }
- 
+
   .about-pull {
     font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
@@ -357,7 +357,7 @@
     padding-left: 1.5rem;
     margin: 2rem 0;
   }
- 
+
   .services-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -365,7 +365,7 @@
     margin-top: 2.5rem;
     border-top: 1px solid var(--border);
   }
- 
+
   .service-item {
     padding: 1rem 0;
     border-bottom: 1px solid var(--border);
@@ -377,12 +377,12 @@
     letter-spacing: 0.08em;
     color: var(--cream-mid);
   }
- 
+
   .service-num {
     color: var(--gold);
     font-size: 10px;
   }
- 
+
   /* ── WORK / PORTFOLIO ── */
   #work .filter-bar {
     display: flex;
@@ -390,7 +390,7 @@
     margin: 2.5rem 0 3rem;
     border-bottom: 1px solid var(--border);
   }
- 
+
   .filter-btn {
     font-family: 'DM Mono', monospace;
     font-size: 11px;
@@ -405,20 +405,20 @@
     transition: color 0.2s, border-color 0.2s;
     margin-bottom: -1px;
   }
- 
+
   .filter-btn.active,
   .filter-btn:hover {
     color: var(--cream);
     border-bottom-color: var(--gold);
   }
- 
+
   .work-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1px;
     background: var(--border);
   }
- 
+
   .work-card {
     background: var(--ink);
     padding: 2rem;
@@ -426,11 +426,11 @@
     display: flex;
     flex-direction: column;
   }
- 
+
   .work-card:hover { background: var(--ink-soft); }
- 
+
   .work-card[data-hidden="true"] { display: none; }
- 
+
   .work-tag {
     font-family: 'DM Mono', monospace;
     font-size: 9px;
@@ -439,7 +439,7 @@
     color: var(--gold);
     margin-bottom: 1rem;
   }
- 
+
   .work-title {
     font-family: 'Playfair Display', serif;
     font-size: 1.15rem;
@@ -448,7 +448,7 @@
     line-height: 1.3;
     margin-bottom: 0.75rem;
   }
- 
+
   .work-desc {
     font-size: 0.875rem;
     color: var(--cream-mid);
@@ -456,7 +456,7 @@
     flex: 1;
     margin-bottom: 1.5rem;
   }
- 
+
   .work-link {
     font-family: 'DM Mono', monospace;
     font-size: 10px;
@@ -469,10 +469,10 @@
     gap: 0.5rem;
     transition: gap 0.2s;
   }
- 
+
   .work-link:hover { gap: 0.75rem; }
   .work-link::after { content: '→'; }
- 
+
   /* ── EXPERIENCE ── */
   #experience .exp-grid {
     display: grid;
@@ -480,11 +480,11 @@
     gap: 0 4rem;
     margin-top: 3rem;
   }
- 
+
   .exp-item {
     display: contents;
   }
- 
+
   .exp-period {
     font-family: 'DM Mono', monospace;
     font-size: 11px;
@@ -494,12 +494,12 @@
     border-top: 1px solid var(--border);
     line-height: 1.5;
   }
- 
+
   .exp-content {
     padding: 2rem 0;
     border-top: 1px solid var(--border);
   }
- 
+
   .exp-title {
     font-family: 'Playfair Display', serif;
     font-size: 1.3rem;
@@ -507,7 +507,7 @@
     color: var(--cream);
     margin-bottom: 0.25rem;
   }
- 
+
   .exp-org {
     font-family: 'DM Mono', monospace;
     font-size: 11px;
@@ -516,14 +516,14 @@
     margin-bottom: 1rem;
     text-transform: uppercase;
   }
- 
+
   .exp-bullets {
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
   }
- 
+
   .exp-bullets li {
     font-size: 0.95rem;
     color: var(--cream-warm);
@@ -531,14 +531,14 @@
     position: relative;
     line-height: 1.6;
   }
- 
+
   .exp-bullets li::before {
     content: '—';
     position: absolute;
     left: 0;
     color: var(--gold);
   }
- 
+
   /* ── CONTACT ── */
   #contact {
     display: grid;
@@ -546,7 +546,7 @@
     gap: 5rem;
     align-items: center;
   }
- 
+
   .contact-headline {
     font-family: 'Playfair Display', serif;
     font-size: clamp(2rem, 4vw, 3.2rem);
@@ -554,26 +554,26 @@
     line-height: 1.2;
     color: var(--cream);
   }
- 
+
   .contact-headline em {
     font-style: italic;
     color: var(--gold-light);
   }
- 
+
   .contact-note {
     font-size: 0.95rem;
     color: var(--cream-mid);
     margin-top: 1.25rem;
     font-style: italic;
   }
- 
+
   .contact-links {
     display: flex;
     flex-direction: column;
     gap: 0;
     border-top: 1px solid var(--border);
   }
- 
+
   .contact-link-item {
     display: flex;
     justify-content: space-between;
@@ -585,9 +585,9 @@
     transition: color 0.2s;
     group: true;
   }
- 
+
   .contact-link-item:hover { color: var(--gold-light); }
- 
+
   .contact-link-label {
     font-family: 'DM Mono', monospace;
     font-size: 10px;
@@ -596,20 +596,20 @@
     color: var(--cream-mid);
     margin-bottom: 0.2rem;
   }
- 
+
   .contact-link-value {
     font-family: 'Lora', serif;
     font-size: 1rem;
   }
- 
+
   .contact-link-arrow {
     color: var(--gold);
     font-size: 1.1rem;
     transition: transform 0.2s;
   }
- 
+
   .contact-link-item:hover .contact-link-arrow { transform: translateX(4px); }
- 
+
   /* ── FOOTER ── */
   footer {
     padding: 2rem 4rem;
@@ -617,14 +617,14 @@
     justify-content: space-between;
     align-items: center;
   }
- 
+
   .footer-copy {
     font-family: 'DM Mono', monospace;
     font-size: 11px;
     letter-spacing: 0.1em;
     color: var(--cream-mid);
   }
- 
+
   .footer-tag {
     font-family: 'DM Mono', monospace;
     font-size: 11px;
@@ -632,24 +632,24 @@
     text-transform: uppercase;
     color: var(--gold);
   }
- 
+
   /* ── ANIMATIONS ── */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
     to { opacity: 1; transform: translateY(0); }
   }
- 
+
   .reveal {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.7s ease, transform 0.7s ease;
   }
- 
+
   .reveal.visible {
     opacity: 1;
     transform: translateY(0);
   }
- 
+
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
     nav { padding: 1rem 2rem; }
@@ -671,7 +671,7 @@
 </style>
 </head>
 <body>
- 
+
 <!-- NAV -->
 <nav>
   <a href="#hero" class="nav-logo">LDK</a>
@@ -682,27 +682,27 @@
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
- 
+
 <!-- HERO -->
 <section id="hero">
   <div class="hero-deco">L</div>
   <div class="hero-rule-top"></div>
- 
+
   <p class="hero-eyebrow">Content Writer &amp; Scriptwriter · India</p>
- 
+
   <h1 class="hero-headline">
     Likhith <em>D</em><br>Kunder
   </h1>
- 
+
   <p class="hero-sub">
     Research-driven storytelling — the kind that finds the story inside a government report, a financial scandal, or a dying community.
   </p>
- 
+
   <div class="hero-cta">
     <a href="#work" class="btn-primary">View My Work</a>
     <a href="mailto:likhith200315@gmail.com" class="btn-secondary">Hire Me</a>
   </div>
- 
+
   <div class="hero-bottom">
     <span class="hero-scroll">Scroll</span>
     <div class="hero-stat">
@@ -711,14 +711,14 @@
     </div>
   </div>
 </section>
- 
+
 <!-- ABOUT -->
 <section id="about">
   <div class="section-label">About</div>
- 
+
   <div class="about-grid">
     <div class="about-photo-wrap reveal">
-   <img src="WhatsApp_Image_2026-04-10_at_3_04_42_PM__1_.jpeg" alt="Likhith D Kunder" onerror="this.style.display='none';">
+     <img src="WhatsApp_Image_2026-04-10_at_3_04_42_PM__1_.jpeg" alt="Likhith D Kunder" onerror="this.style.display='none';">
       <!-- Fallback if image path differs -->
       <div style="display:none; width:100%; aspect-ratio:3/4; background:var(--ink-soft); border:1px solid var(--border-strong); align-items:center; justify-content:center; flex-direction:column; gap:1rem;">
         <span style="font-family:'Playfair Display',serif; font-size:4rem; font-weight:900; color:var(--gold-light);">LK</span>
@@ -727,18 +727,18 @@
       <div class="about-photo-frame"></div>
       <div class="about-photo-label">Based in India</div>
     </div>
- 
+
     <div class="about-text reveal">
       <h2>I write things <em>worth reading.</em></h2>
- 
+
       <div class="about-pull">
         "Find the story inside a government report, a financial scandal, or a travel destination — that's what I do."
       </div>
- 
+
       <p>I'm a freelance content writer and scriptwriter. I specialise in <strong>research-driven storytelling</strong> — the kind that takes a dense, complicated topic and makes it feel urgent and human.</p>
- 
+
       <p>My work spans YouTube documentary scripts, short-form reel content, investigative journalism, travel writing, and personal essays. I've covered geopolitics, banking fraud, internet mysteries, energy crises, and the places in between.</p>
- 
+
       <div class="services-list">
         <div class="service-item"><span class="service-num">01</span> YouTube Documentary Scripts</div>
         <div class="service-item"><span class="service-num">02</span> Short-Form Reel &amp; Shorts Scripts</div>
@@ -752,12 +752,12 @@
     </div>
   </div>
 </section>
- 
+
 <!-- WORK -->
 <section id="work">
   <div class="section-label">Selected Work</div>
   <h2>What I've <em>Written</em></h2>
- 
+
   <div class="filter-bar">
     <button class="filter-btn active" data-filter="all">All</button>
     <button class="filter-btn" data-filter="documentary">Documentary</button>
@@ -766,122 +766,122 @@
     <button class="filter-btn" data-filter="podcast">Podcast</button>
     <button class="filter-btn" data-filter="blog">Blog &amp; Essays</button>
   </div>
- 
+
   <div class="work-grid">
- 
+
     <div class="work-card reveal" data-category="documentary">
       <div class="work-tag">Documentary Script · Geopolitics</div>
       <div class="work-title">The Indian Ocean's $50 Billion Trap</div>
       <div class="work-desc">How Sri Lanka's debt crisis became the frontline of China and India's battle for control of the Indian Ocean — and what it means for the region.</div>
       <a class="work-link" href="https://drive.google.com/file/d/1R0tQJaLFXetGmIhN32o9UlX9P3KNSUJ2/view?usp=sharing" target="_blank" rel="noopener">Read Sample</a>
     </div>
- 
+
     <div class="work-card reveal" data-category="documentary">
       <div class="work-tag">Documentary Script · Mystery / ARG</div>
       <div class="work-title">The Night That Never Ended: The Sun Vanished</div>
       <div class="work-desc">A 7+ minute YouTube script with full production timeline, visual direction, SFX notes, and deep lore breakdown of one of the internet's most acclaimed ARG series.</div>
       <a class="work-link" href="https://docs.google.com/document/d/1-im5RK4_h_kfGRGT2oeZpc9AHo17aCqy_zSuVI-_xH8/edit?usp=sharing" target="_blank" rel="noopener">Read Sample</a>
     </div>
- 
+
     <div class="work-card reveal" data-category="documentary">
       <div class="work-tag">YouTube Script · Science / Education</div>
       <div class="work-title">Study Music That Actually Works</div>
       <div class="work-desc">A research-backed script breaking down the Mozart Effect, Brown Noise, and Lo-Fi — what the science actually says, when each works, and why most people are using them wrong.</div>
       <a class="work-link" href="https://docs.google.com/document/d/1yYfOosOZfqFf1I8IFRF_qGqc0eIW4QfAQ7fA261vlKE/edit?usp=sharing" target="_blank" rel="noopener">Read Sample</a>
     </div>
- 
+
     <div class="work-card reveal" data-category="reel">
       <div class="work-tag">Reel Script · Economics / Tech</div>
       <div class="work-title">The $10 Trillion Semiconductor Gamble</div>
       <div class="work-desc">Taiwan produces 92% of the world's advanced chips. A short-form educational script breaking down what a conflict could mean for the global economy.</div>
       <a class="work-link" href="https://drive.google.com/file/d/1uNEH_ZkGZABWyQkLHxnh1--w4UmGLJ8Y/view?usp=sharing" target="_blank" rel="noopener">Read Sample</a>
     </div>
- 
+
     <div class="work-card reveal" data-category="reel">
       <div class="work-tag">Reel Script · Current Affairs</div>
       <div class="work-title">The Reality of India's AI Summit</div>
       <div class="work-desc">A sharp commentary reel critiquing India's AI governance ambitions, the US rejection of global AI oversight, and the country's compute gap.</div>
       <a class="work-link" href="https://drive.google.com/file/d/1kI0cHd_huCIzVHvgL48ZCObV6BpXbKWh/view?usp=sharing" target="_blank" rel="noopener">Read Sample</a>
     </div>
- 
+
     <div class="work-card reveal" data-category="reel">
       <div class="work-tag">Reel Script · Brand / Social Media</div>
       <div class="work-title">The Social Bling — Brand Reel</div>
       <div class="work-desc">A 40-second conversational brand reel for a social media marketing agency. Hooks on audience frustration, diagnoses the problem, converts — without sounding like an ad.</div>
       <a class="work-link" href="https://docs.google.com/document/d/104quLXzqh_yuzV54BEhpwh3QDBROY4YrJWIxQBq_AFM/edit?usp=sharing" target="_blank" rel="noopener">Read Sample</a>
     </div>
- 
+
     <div class="work-card reveal" data-category="reel">
       <div class="work-tag">Reel Script · Real Estate / Hinglish</div>
       <div class="work-title">CityPearl Layout — Buyer POV Reel</div>
       <div class="work-desc">A Hinglish buyer-POV reel for a residential plot launch in Mangalore. Casual, energetic, location-led storytelling with a strong CTA — built for Instagram reach.</div>
       <a class="work-link" href="https://docs.google.com/document/d/1KkP3bAFBRRD3wD1MIpDhSpbCJHgyomzWcpYFWKnGn4U/edit?usp=sharing" target="_blank" rel="noopener">Read Sample</a>
     </div>
- 
+
     <div class="work-card reveal" data-category="reel">
       <div class="work-tag">Reel Script · Career / Social Commentary</div>
       <div class="work-title">The Layoff No One Saw Coming</div>
       <div class="work-desc">A hard-hitting Hinglish reel on mass layoffs — Oracle, Meta, Google — and why loyalty is no longer job security. Built for maximum hook retention and emotional resonance.</div>
       <a class="work-link" href="https://docs.google.com/document/d/1SXv284ut8XOx_BdGf9TfwFGNOmifTMEOal-qDN5yKso/edit?usp=sharing" target="_blank" rel="noopener">Read Sample</a>
     </div>
- 
+
     <div class="work-card reveal" data-category="investigative">
       <div class="work-tag">Investigative Script · Finance</div>
       <div class="work-title">The IDFC First Family Scam</div>
       <div class="work-desc">Inside a ₹590 crore banking fraud involving government funds and internal bank officials — researched, structured, and scripted for video.</div>
       <a class="work-link" href="https://drive.google.com/file/d/14EAXOMFD4hCbfFvT-L39G37wJEgOp-kO/view?usp=sharing" target="_blank" rel="noopener">Read Sample</a>
     </div>
- 
+
     <div class="work-card reveal" data-category="investigative">
       <div class="work-tag">News Script · Energy Crisis</div>
       <div class="work-title">India's Restaurants Are Running Out of Gas</div>
       <div class="work-desc">How a disruption near the Strait of Hormuz is threatening India's LPG supply — and what it means for millions of small restaurant owners.</div>
       <a class="work-link" href="https://docs.google.com/document/d/1zK72f4976JqzYTEKphjVg7lquSYfM-ySSQ8iOEcGZks/edit?usp=sharing" target="_blank" rel="noopener">Read Sample</a>
     </div>
- 
+
     <div class="work-card reveal" data-category="podcast">
       <div class="work-tag">Podcast Script · Culture / History</div>
       <div class="work-title">The Siddi Community — India's Forgotten African Tribe</div>
       <div class="work-desc">A full-length interview-style podcast script exploring the 400-year history of the Siddis — their African roots, cultural survival, invisibility in mainstream discourse, and uncertain future.</div>
       <a class="work-link" href="https://docs.google.com/document/d/17CCie4rKSp7h6pZ_D_inEqvCfa9l0TvqDifq--pvkNw/edit?usp=sharing" target="_blank" rel="noopener">Read Sample</a>
     </div>
- 
+
     <div class="work-card reveal" data-category="blog">
       <div class="work-tag">Travel Blog · Lifestyle</div>
       <div class="work-title">Coorg — India's Best Kept Secret</div>
       <div class="work-desc">A long-form destination guide to Karnataka's most beloved hill district — blending personal narrative, local insights, and practical travel tips.</div>
       <a class="work-link" href="https://docs.google.com/document/d/1ibId2OREcR-F1cgaMePlkVnAMj4EcXxZ/edit?usp=sharing" target="_blank" rel="noopener">Read Sample</a>
     </div>
- 
+
     <div class="work-card reveal" data-category="blog">
       <div class="work-tag">Travel Blog · Personal Story</div>
       <div class="work-title">Five Idiots and a Dented Car — Pondicherry</div>
       <div class="work-desc">A humorous, chaotic personal travel story: five friends, a rental car scratch, quicksand, beer at a state border, and one bed for five in Auroville.</div>
       <a class="work-link" href="https://docs.google.com/document/d/1a-Y4ksJuiLr_YQeB4ywzun6eBY1WP7Py/edit?usp=drive_link" target="_blank" rel="noopener">Read Sample</a>
     </div>
- 
+
     <div class="work-card reveal" data-category="blog">
       <div class="work-tag">Personal Essay · Medium</div>
       <div class="work-title">The Responsibility of Friendship</div>
       <div class="work-desc">A reflection on maturity, boundaries, and what it really means to show up for the people you care about.</div>
       <a class="work-link" href="https://docs.google.com/document/d/1R9qPiLzmXCfoY3uLwsW0GF7yErX8W-WJ3V0qWu8meFg/edit?usp=sharing" target="_blank" rel="noopener">Read Article</a>
     </div>
- 
+
     <div class="work-card reveal" data-category="blog">
       <div class="work-tag">Personal Essay · Film Analysis</div>
       <div class="work-title">What the Whale Made Me Feel</div>
       <div class="work-desc">A film analysis of Aronofsky's "The Whale" — exploring guilt, emotional avoidance, and what it means to want to be seen before it's too late.</div>
       <a class="work-link" href="https://docs.google.com/document/d/1A3UdoaQZmt9fHenCsIMyJ46xtBGfNxZ9sItMvTWCIjk/edit?usp=sharing" target="_blank" rel="noopener">Read Article</a>
     </div>
- 
+
   </div>
 </section>
- 
+
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-label">Experience</div>
   <h2>Where I've <em>Worked</em></h2>
- 
+
   <div class="exp-grid">
     <div class="exp-item reveal">
       <div class="exp-period">Mar 2025 —<br>Present</div>
@@ -895,7 +895,7 @@
         </ul>
       </div>
     </div>
- 
+
     <div class="exp-item reveal">
       <div class="exp-period">Jan 2025 —<br>Present</div>
       <div class="exp-content">
@@ -910,7 +910,7 @@
     </div>
   </div>
 </section>
- 
+
 <!-- CONTACT -->
 <section id="contact">
   <div>
@@ -918,7 +918,7 @@
     <h2 class="contact-headline">Let's Work <em>Together.</em></h2>
     <p class="contact-note">Open to freelance projects, long-term clients, and collaborations. Scripts, articles, investigative pieces — let's talk.</p>
   </div>
- 
+
   <div class="contact-links reveal">
     <a href="mailto:likhith200315@gmail.com" class="contact-link-item">
       <div>
@@ -943,13 +943,13 @@
     </a>
   </div>
 </section>
- 
+
 <!-- FOOTER -->
 <footer>
   <span class="footer-copy">© 2026 Likhith D Kunder</span>
   <span class="footer-tag">Content Writer · Scriptwriter · India</span>
 </footer>
- 
+
 <script>
   // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
@@ -962,11 +962,11 @@
     });
   }, { threshold: 0.08 });
   reveals.forEach(el => observer.observe(el));
- 
+
   // Filter
   const filterBtns = document.querySelectorAll('.filter-btn');
   const cards = document.querySelectorAll('.work-card');
- 
+
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       filterBtns.forEach(b => b.classList.remove('active'));
@@ -981,7 +981,7 @@
       });
     });
   });
- 
+
   // Fix photo path — try multiple possible paths
   const img = document.querySelector('.about-photo-wrap img');
   if (img) {
