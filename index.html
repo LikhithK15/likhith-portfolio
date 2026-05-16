@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Likhith D Kunder Content Writer & Scriptwriter</title>
+<title>Likhith D Kunder — Content Writer & Scriptwriter</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Mono:wght@400;500&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-
+ 
 <style>
   :root {
     --ink: #0e0d0b;
@@ -20,10 +20,10 @@
     --border: rgba(200,191,173,0.2);
     --border-strong: rgba(200,191,173,0.4);
   }
-
+ 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
-
+ 
   body {
     background: var(--ink);
     color: var(--cream);
@@ -32,7 +32,7 @@
     line-height: 1.7;
     overflow-x: hidden;
   }
-
+ 
   body::before {
     content: '';
     position: fixed;
@@ -42,7 +42,7 @@
     z-index: 1000;
     opacity: 0.4;
   }
-
+ 
   /* NAV */
   nav {
     position: fixed;
@@ -75,7 +75,7 @@
     transition: color 0.2s;
   }
   .nav-links a:hover { color: var(--cream); }
-
+ 
   /* HERO */
   #hero {
     min-height: 100vh;
@@ -132,7 +132,7 @@
     font-family: 'Lora', serif;
     font-size: 1.1rem;
     color: var(--cream-mid);
-    max-width: 500px;
+    max-width: 560px;
     margin-top: 2rem;
     font-style: italic;
     line-height: 1.7;
@@ -175,11 +175,13 @@
     transition: border-color 0.2s, color 0.2s;
   }
   .btn-secondary:hover { border-color: var(--cream); }
-
-  .hero-stat {
+ 
+  .hero-stats {
     position: absolute;
     bottom: 3rem;
     right: 4rem;
+    display: flex;
+    gap: 3rem;
     text-align: right;
   }
   .hero-stat-num {
@@ -197,7 +199,7 @@
     color: var(--cream-mid);
     margin-top: 0.3rem;
   }
-
+ 
   /* SECTIONS */
   section {
     padding: 6rem 4rem;
@@ -215,7 +217,7 @@
     gap: 1rem;
   }
   .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
-
+ 
   h2 {
     font-family: 'Playfair Display', serif;
     font-size: clamp(2.2rem, 4vw, 3.5rem);
@@ -225,7 +227,7 @@
     letter-spacing: -0.01em;
   }
   h2 em { font-style: italic; color: var(--gold-light); }
-
+ 
   /* ABOUT */
   .about-text { max-width: 780px; margin-top: 2.5rem; }
   .about-text p {
@@ -263,12 +265,95 @@
     color: var(--cream-mid);
   }
   .service-num { color: var(--gold); font-size: 10px; }
-
+ 
+  /* FEATURED */
+  #featured {
+    padding: 6rem 4rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .featured-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--border);
+    margin-top: 3rem;
+  }
+  .featured-card {
+    background: var(--ink-soft);
+    padding: 2.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: background 0.2s;
+  }
+  .featured-card:hover { background: #221f19; }
+  .featured-card.wide {
+    grid-column: 1 / -1;
+  }
+  .featured-badge {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--ink);
+    background: var(--gold);
+    padding: 0.3rem 0.75rem;
+    display: inline-block;
+    margin-bottom: 1.25rem;
+    align-self: flex-start;
+  }
+  .featured-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+  }
+  .featured-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--cream);
+    line-height: 1.25;
+    margin-bottom: 1rem;
+  }
+  .featured-desc {
+    font-size: 0.9rem;
+    color: var(--cream-mid);
+    line-height: 1.7;
+    flex: 1;
+    margin-bottom: 1.5rem;
+  }
+  .featured-meta {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    opacity: 0.7;
+    margin-bottom: 1rem;
+  }
+  .work-link {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: gap 0.2s;
+  }
+  .work-link:hover { gap: 0.75rem; }
+  .work-link::after { content: '→'; }
+ 
   /* WORK */
   .filter-bar {
     display: flex;
     margin: 2.5rem 0 3rem;
     border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
   }
   .filter-btn {
     font-family: 'DM Mono', monospace;
@@ -285,7 +370,7 @@
     margin-bottom: -1px;
   }
   .filter-btn.active, .filter-btn:hover { color: var(--cream); border-bottom-color: var(--gold); }
-
+ 
   .work-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -301,7 +386,7 @@
   }
   .work-card:hover { background: var(--ink-soft); }
   .work-card[data-hidden] { display: none; }
-
+ 
   .work-tag {
     font-family: 'DM Mono', monospace;
     font-size: 9px;
@@ -325,21 +410,91 @@
     flex: 1;
     margin-bottom: 1.5rem;
   }
-  .work-link {
+ 
+  /* CHANNEL SPOTLIGHT */
+  .channel-block {
+    margin-top: 3rem;
+    border: 1px solid var(--border-strong);
+    padding: 2.5rem;
+  }
+  .channel-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    gap: 2rem;
+  }
+  .channel-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--cream);
+  }
+  .channel-name span {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+  .channel-desc {
+    font-size: 0.95rem;
+    color: var(--cream-mid);
+    line-height: 1.7;
+    max-width: 600px;
+    margin-top: 0.5rem;
+  }
+  .channel-stat {
+    text-align: right;
+    flex-shrink: 0;
+  }
+  .channel-stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--gold-light);
+  }
+  .channel-stat-label {
     font-family: 'DM Mono', monospace;
-    font-size: 10px;
+    font-size: 9px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--gold);
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: gap 0.2s;
+    color: var(--cream-mid);
+    margin-top: 0.2rem;
   }
-  .work-link:hover { gap: 0.75rem; }
-  .work-link::after { content: '→'; }
-
+  .channel-scripts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+  }
+  .channel-script {
+    background: var(--ink);
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    transition: background 0.2s;
+  }
+  .channel-script:hover { background: var(--ink-soft); }
+  .script-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+  }
+  .script-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--cream);
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+  }
+  .script-desc {
+    font-size: 0.82rem;
+    color: var(--cream-mid);
+    line-height: 1.6;
+    flex: 1;
+  }
+ 
   /* EXPERIENCE */
   .exp-grid {
     display: grid;
@@ -382,7 +537,7 @@
     line-height: 1.6;
   }
   .exp-bullets li::before { content: '—'; position: absolute; left: 0; color: var(--gold); }
-
+ 
   /* CONTACT */
   #contact {
     display: grid;
@@ -427,7 +582,7 @@
   }
   .contact-link-value { font-family: 'Lora', serif; font-size: 1rem; }
   .contact-link-arrow { color: var(--gold); font-size: 1.1rem; transition: transform 0.2s; }
-
+ 
   /* FOOTER */
   footer {
     padding: 2rem 4rem;
@@ -437,7 +592,7 @@
   }
   .footer-copy { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: var(--cream-mid); }
   .footer-tag  { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); }
-
+ 
   /* ANIMATIONS */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
@@ -445,17 +600,22 @@
   }
   .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
   .reveal.visible { opacity: 1; transform: translateY(0); }
-
+ 
   /* RESPONSIVE */
   @media (max-width: 900px) {
     nav { padding: 1rem 2rem; }
     .nav-links { gap: 1.5rem; }
-    section { padding: 4rem 2rem; }
+    section, #featured { padding: 4rem 2rem; }
     #hero { padding: 7rem 2rem 6rem; }
     .hero-deco { display: none; }
-    .hero-stat { right: 2rem; bottom: 2rem; }
+    .hero-stats { right: 2rem; bottom: 2rem; gap: 1.5rem; }
     .services-list { grid-template-columns: 1fr; }
     .work-grid { grid-template-columns: 1fr; }
+    .featured-grid { grid-template-columns: 1fr; }
+    .featured-card.wide { grid-column: 1; }
+    .channel-scripts { grid-template-columns: 1fr; }
+    .channel-header { flex-direction: column; }
+    .channel-stat { text-align: left; }
     .exp-grid { grid-template-columns: 1fr; gap: 0; }
     .exp-period { padding-bottom: 0.5rem; }
     .exp-content { border-top: none; padding-top: 0; }
@@ -465,179 +625,296 @@
 </style>
 </head>
 <body>
-
+ 
 <nav>
   <a href="#hero" class="nav-logo">LDK</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
-    <li><a href="#work">Work</a></li>
+    <li><a href="#featured">Featured</a></li>
+    <li><a href="#work">All Work</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
-
+ 
 <section id="hero">
   <div class="hero-rule-top"></div>
   <div class="hero-deco">L</div>
   <p class="hero-eyebrow">Content Writer &amp; Scriptwriter · India</p>
   <h1 class="hero-headline">Likhith <em>D</em><br>Kunder</h1>
-  <p class="hero-sub">Research-driven storytelling the kind that finds the story inside a government report, a financial scandal, or a dying community.</p>
+  <p class="hero-sub">I write documentary scripts and personal essay content for YouTube — research-driven storytelling that finds the human inside a government report, a financial scandal, or a creator's real life.</p>
   <div class="hero-cta">
-    <a href="#work" class="btn-primary">View My Work</a>
+    <a href="#featured" class="btn-primary">View My Work</a>
     <a href="mailto:likhith200315@gmail.com" class="btn-secondary">Hire Me</a>
   </div>
-  <div class="hero-stat">
-    <div class="hero-stat-num">40+</div>
-    <div class="hero-stat-label">Published Samples</div>
-  </div>
-</section>
-
-<section id="about">
-  <div class="section-label">About</div>
-  <h2>I write things <em>worth reading.</em></h2>
-  <div class="about-text reveal">
-    <div class="about-pull">"Find the story inside a government report, a financial scandal, or a travel destination that's what I do."</div>
-    <p>I'm a freelance content writer and scriptwriter. I specialise in <strong>research-driven storytelling</strong> the kind that takes a dense, complicated topic and makes it feel urgent and human.</p>
-    <p>My work spans YouTube documentary scripts, short-form reel content, investigative journalism, travel writing, and personal essays. I've covered geopolitics, banking fraud, internet mysteries, energy crises, and the places in between.</p>
-    <div class="services-list">
-      <div class="service-item"><span class="service-num">01</span> YouTube Documentary Scripts</div>
-      <div class="service-item"><span class="service-num">02</span> Short-Form Reel &amp; Shorts Scripts</div>
-      <div class="service-item"><span class="service-num">03</span> Investigative &amp; News Writing</div>
-      <div class="service-item"><span class="service-num">04</span> Geopolitics &amp; Finance Storytelling</div>
-      <div class="service-item"><span class="service-num">05</span> Travel &amp; Lifestyle Blog Writing</div>
-      <div class="service-item"><span class="service-num">06</span> Podcast &amp; Interview Scripts</div>
-      <div class="service-item"><span class="service-num">07</span> Brand Reel &amp; Social Media Copy</div>
-      <div class="service-item"><span class="service-num">08</span> Personal Essays &amp; Reflections</div>
+  <div class="hero-stats">
+    <div>
+      <div class="hero-stat-num">40+</div>
+      <div class="hero-stat-label">Published Samples</div>
+    </div>
+    <div>
+      <div class="hero-stat-num">8+</div>
+      <div class="hero-stat-label">Scripts for Active Channel</div>
     </div>
   </div>
 </section>
-
+ 
+<section id="about">
+  <div class="section-label">About</div>
+  <h2>I write things <em>worth watching.</em></h2>
+  <div class="about-text reveal">
+    <div class="about-pull">"The story is always inside the material. My job is to find it and make it land."</div>
+    <p>I'm a freelance scriptwriter specialising in two things: <strong>research-driven documentary scripts</strong> for YouTube channels covering geopolitics, finance, and investigative topics — and <strong>personal essay scripts</strong> for creators building authentic audiences around real stories and honest self-reflection.</p>
+    <p>I've covered Sri Lanka's debt crisis, banking fraud, India's energy supply chain, internet mysteries, and the invisible internal shifts that define how people actually grow. If there's a story worth telling, I'll find the angle that makes someone stop scrolling.</p>
+    <div class="services-list">
+      <div class="service-item"><span class="service-num">01</span> YouTube Documentary Scripts</div>
+      <div class="service-item"><span class="service-num">02</span> Personal Essay &amp; Confessional Scripts</div>
+      <div class="service-item"><span class="service-num">03</span> Investigative &amp; News Writing</div>
+      <div class="service-item"><span class="service-num">04</span> Geopolitics &amp; Finance Storytelling</div>
+      <div class="service-item"><span class="service-num">05</span> Short-Form Reel &amp; Shorts Scripts</div>
+      <div class="service-item"><span class="service-num">06</span> Podcast &amp; Interview Scripts</div>
+      <div class="service-item"><span class="service-num">07</span> Travel &amp; Lifestyle Writing</div>
+      <div class="service-item"><span class="service-num">08</span> Brand &amp; Social Media Copy</div>
+    </div>
+  </div>
+</section>
+ 
+<!-- FEATURED WORK -->
+<section id="featured">
+  <div class="section-label">Featured Work</div>
+  <h2>The strongest <em>pieces.</em></h2>
+ 
+  <div class="featured-grid reveal">
+ 
+    <div class="featured-card">
+      <div class="featured-badge">Featured</div>
+      <div class="featured-tag">Documentary Script · Geopolitics</div>
+      <div class="featured-title">The Indian Ocean's $50 Billion Trap</div>
+      <div class="featured-desc">How Sri Lanka's debt crisis became the frontline of China and India's battle for control of the Indian Ocean. A full production-ready documentary script built on multilayered geopolitical research.</div>
+      <a class="work-link" href="https://drive.google.com/file/d/1R0tQJaLFXetGmIhN32o9UlX9P3KNSUJ2/view?usp=sharing" target="_blank" rel="noopener">Read Sample</a>
+    </div>
+ 
+    <div class="featured-card">
+      <div class="featured-badge">Featured</div>
+      <div class="featured-tag">Investigative Script · Finance</div>
+      <div class="featured-title">The IDFC First Family Scam</div>
+      <div class="featured-desc">Inside a ₹590 crore banking fraud involving government funds and internal bank officials. Researched, structured, and scripted for long-form video with full source documentation.</div>
+      <a class="work-link" href="https://drive.google.com/file/d/14EAXOMFD4hCbfFvT-L39G37wJEgOp-kO/view?usp=sharing" target="_blank" rel="noopener">Read Sample</a>
+    </div>
+ 
+    <div class="featured-card">
+      <div class="featured-badge">Featured</div>
+      <div class="featured-tag">Personal Essay Script · Authenticity</div>
+      <div class="featured-title">Why I Kept Deleting My Videos</div>
+      <div class="featured-desc">A confessional video essay about accent insecurity, self-erasure, and what happens when deleting yourself starts to feel worse than being seen. Written for No Guidebook — a personal growth channel built around honest storytelling.</div>
+      <div class="featured-meta">No Guidebook · Personal Growth Channel</div>
+      <a class="work-link" href="#no-guidebook" rel="noopener">View Channel Scripts ↓</a>
+    </div>
+ 
+    <div class="featured-card">
+      <div class="featured-badge">Featured</div>
+      <div class="featured-tag">Documentary Script · Mystery / ARG</div>
+      <div class="featured-title">The Night That Never Ended: The Sun Vanished</div>
+      <div class="featured-desc">A 7+ minute YouTube script with full production timeline, visual direction, SFX notes, and deep lore breakdown of one of the internet's most acclaimed ARG series.</div>
+      <a class="work-link" href="https://docs.google.com/document/d/1-im5RK4_h_kfGRGT2oeZpc9AHo17aCqy_zSuVI-_xH8/edit?usp=sharing" target="_blank" rel="noopener">Read Sample</a>
+    </div>
+ 
+  </div>
+ 
+  <!-- NO GUIDEBOOK CHANNEL BLOCK -->
+  <div class="channel-block reveal" id="no-guidebook">
+    <div class="channel-header">
+      <div>
+        <div class="channel-name">No <span>Guidebook</span></div>
+        <div class="channel-desc">An ongoing scriptwriting collaboration for a personal growth YouTube channel. Every script is built from the creator's real experiences — unemployment, a newborn, accent insecurity, and the slow process of showing up anyway. The writing stays specific, honest, and deliberately unpolished where polish would cost authenticity.</div>
+      </div>
+      <div class="channel-stat">
+        <div class="channel-stat-num">8+</div>
+        <div class="channel-stat-label">Scripts Written</div>
+      </div>
+    </div>
+    <div class="channel-scripts">
+      <div class="channel-script">
+        <div class="script-num">Script 01</div>
+        <div class="script-title">Why I Kept Deleting My Videos</div>
+        <div class="script-desc">About accent insecurity and the version of yourself you keep erasing before anyone else gets to see it. The channel's debut script — built from real lived detail, not self-improvement tropes.</div>
+      </div>
+      <div class="channel-script">
+        <div class="script-num">Script 02</div>
+        <div class="script-title">The Art of Being Disciplined Anyway</div>
+        <div class="script-desc">Draws a real distinction between motivation (a feeling) and discipline (a decision made before the feeling arrives). Built around a creator who had no choice but to show up — four months unemployed, newborn at home.</div>
+      </div>
+      <div class="channel-script">
+        <div class="script-num">Script 08</div>
+        <div class="script-title">The Version We're Waiting For</div>
+        <div class="script-desc">On the future self we keep stalling for — and why that version is a result of starting, not a prerequisite for it. Uses Kierkegaard's backwards-forwards observation to anchor the central argument.</div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ALL WORK -->
 <section id="work">
-  <div class="section-label">Selected Work</div>
+  <div class="section-label">All Work</div>
   <h2>What I've <em>Written</em></h2>
   <div class="filter-bar">
     <button class="filter-btn active" data-filter="all">All</button>
     <button class="filter-btn" data-filter="documentary">Documentary</button>
+    <button class="filter-btn" data-filter="essay">Personal Essay</button>
     <button class="filter-btn" data-filter="reel">Reel Scripts</button>
     <button class="filter-btn" data-filter="investigative">Investigative</button>
     <button class="filter-btn" data-filter="podcast">Podcast</button>
     <button class="filter-btn" data-filter="blog">Blog &amp; Essays</button>
   </div>
   <div class="work-grid">
-
+ 
     <div class="work-card reveal" data-category="documentary">
       <div class="work-tag">Documentary Script · Geopolitics</div>
       <div class="work-title">The Indian Ocean's $50 Billion Trap</div>
       <div class="work-desc">How Sri Lanka's debt crisis became the frontline of China and India's battle for control of the Indian Ocean and what it means for the region.</div>
       <a class="work-link" href="https://drive.google.com/file/d/1R0tQJaLFXetGmIhN32o9UlX9P3KNSUJ2/view?usp=sharing" target="_blank" rel="noopener">Read Sample</a>
     </div>
-
+ 
     <div class="work-card reveal" data-category="documentary">
       <div class="work-tag">Documentary Script · Mystery / ARG</div>
       <div class="work-title">The Night That Never Ended: The Sun Vanished</div>
       <div class="work-desc">A 7+ minute YouTube script with full production timeline, visual direction, SFX notes, and deep lore breakdown of one of the internet's most acclaimed ARG series.</div>
       <a class="work-link" href="https://docs.google.com/document/d/1-im5RK4_h_kfGRGT2oeZpc9AHo17aCqy_zSuVI-_xH8/edit?usp=sharing" target="_blank" rel="noopener">Read Sample</a>
     </div>
-
+ 
     <div class="work-card reveal" data-category="documentary">
       <div class="work-tag">YouTube Script · Science / Education</div>
       <div class="work-title">Study Music That Actually Works</div>
-      <div class="work-desc">A research-backed script breaking down the Mozart Effect, Brown Noise, and Lo-Fi what the science says, when each works, and why most people are using them wrong.</div>
+      <div class="work-desc">A research-backed script breaking down the Mozart Effect, Brown Noise, and Lo-Fi — what the science says, when each works, and why most people are using them wrong.</div>
       <a class="work-link" href="https://docs.google.com/document/d/1yYfOosOZfqFf1I8IFRF_qGqc0eIW4QfAQ7fA261vlKE/edit?usp=sharing" target="_blank" rel="noopener">Read Sample</a>
     </div>
-
+ 
+    <div class="work-card reveal" data-category="essay">
+      <div class="work-tag">Personal Essay Script · No Guidebook</div>
+      <div class="work-title">Why I Kept Deleting My Videos</div>
+      <div class="work-desc">A confessional essay on accent insecurity and self-erasure. Built from real detail — four months unemployed, a newborn at home, sixty AI voices auditioned before a realisation hit.</div>
+      <a class="work-link" href="#no-guidebook">View in Featured</a>
+    </div>
+ 
+    <div class="work-card reveal" data-category="essay">
+      <div class="work-tag">Personal Essay Script · No Guidebook</div>
+      <div class="work-title">The Art of Being Disciplined Anyway</div>
+      <div class="work-desc">Separates motivation from discipline in concrete terms — not as a theory but as something the creator had to learn when he had no choice but to show up.</div>
+      <a class="work-link" href="#no-guidebook">View in Featured</a>
+    </div>
+ 
+    <div class="work-card reveal" data-category="essay">
+      <div class="work-tag">Personal Essay Script · No Guidebook</div>
+      <div class="work-title">The Version We're Waiting For</div>
+      <div class="work-desc">On the future self people stall for — and why that version is built through starting, not before it. Anchored by Kierkegaard's observation that life can only be understood backwards.</div>
+      <a class="work-link" href="#no-guidebook">View in Featured</a>
+    </div>
+ 
     <div class="work-card reveal" data-category="reel">
       <div class="work-tag">Reel Script · Economics / Tech</div>
       <div class="work-title">The $10 Trillion Semiconductor Gamble</div>
       <div class="work-desc">Taiwan produces 92% of the world's advanced chips. A short-form educational script breaking down what a conflict could mean for the global economy.</div>
       <a class="work-link" href="https://drive.google.com/file/d/1uNEH_ZkGZABWyQkLHxnh1--w4UmGLJ8Y/view?usp=sharing" target="_blank" rel="noopener">Read Sample</a>
     </div>
-
+ 
     <div class="work-card reveal" data-category="reel">
       <div class="work-tag">Reel Script · Current Affairs</div>
       <div class="work-title">The Reality of India's AI Summit</div>
       <div class="work-desc">A sharp commentary reel critiquing India's AI governance ambitions, the US rejection of global AI oversight, and the country's compute gap.</div>
       <a class="work-link" href="https://drive.google.com/file/d/1kI0cHd_huCIzVHvgL48ZCObV6BpXbKWh/view?usp=sharing" target="_blank" rel="noopener">Read Sample</a>
     </div>
-
+ 
     <div class="work-card reveal" data-category="reel">
       <div class="work-tag">Reel Script · Brand / Social Media</div>
       <div class="work-title">The Social Bling — Brand Reel</div>
-      <div class="work-desc">A 40-second conversational brand reel for a social media marketing agency. Hooks on frustration, diagnoses the problem, converts without sounding like an ad.</div>
+      <div class="work-desc">A 40-second conversational brand reel for a social media marketing agency. Hooks on audience frustration, diagnoses the problem, converts without sounding like an ad.</div>
       <a class="work-link" href="https://docs.google.com/document/d/104quLXzqh_yuzV54BEhpwh3QDBROY4YrJWIxQBq_AFM/edit?usp=sharing" target="_blank" rel="noopener">Read Sample</a>
     </div>
-
+ 
     <div class="work-card reveal" data-category="reel">
       <div class="work-tag">Reel Script · Real Estate / Hinglish</div>
       <div class="work-title">CityPearl Layout — Buyer POV Reel</div>
       <div class="work-desc">A Hinglish buyer-POV reel for a residential plot launch in Mangalore. Casual, energetic, location-led storytelling with a strong CTA built for Instagram reach.</div>
       <a class="work-link" href="https://docs.google.com/document/d/1KkP3bAFBRRD3wD1MIpDhSpbCJHgyomzWcpYFWKnGn4U/edit?usp=sharing" target="_blank" rel="noopener">Read Sample</a>
     </div>
-
+ 
     <div class="work-card reveal" data-category="reel">
       <div class="work-tag">Reel Script · Career / Social Commentary</div>
       <div class="work-title">The Layoff No One Saw Coming</div>
-      <div class="work-desc">A hard-hitting Hinglish reel on mass layoffs Oracle, Meta, Google and why loyalty is no longer job security. Built for maximum hook retention and emotional resonance.</div>
+      <div class="work-desc">A hard-hitting Hinglish reel on mass layoffs — Oracle, Meta, Google — and why loyalty is no longer job security. Built for maximum hook retention and emotional resonance.</div>
       <a class="work-link" href="https://docs.google.com/document/d/1SXv284ut8XOx_BdGf9TfwFGNOmifTMEOal-qDN5yKso/edit?usp=sharing" target="_blank" rel="noopener">Read Sample</a>
     </div>
-
+ 
     <div class="work-card reveal" data-category="investigative">
       <div class="work-tag">Investigative Script · Finance</div>
       <div class="work-title">The IDFC First Family Scam</div>
-      <div class="work-desc">Inside a ₹590 crore banking fraud involving government funds and internal bank officials researched, structured, and scripted for video.</div>
+      <div class="work-desc">Inside a ₹590 crore banking fraud involving government funds and internal bank officials — researched, structured, and scripted for video.</div>
       <a class="work-link" href="https://drive.google.com/file/d/14EAXOMFD4hCbfFvT-L39G37wJEgOp-kO/view?usp=sharing" target="_blank" rel="noopener">Read Sample</a>
     </div>
-
+ 
     <div class="work-card reveal" data-category="investigative">
       <div class="work-tag">News Script · Energy Crisis</div>
       <div class="work-title">India's Restaurants Are Running Out of Gas</div>
       <div class="work-desc">How a disruption near the Strait of Hormuz is threatening India's LPG supply and what it means for millions of small restaurant owners.</div>
       <a class="work-link" href="https://docs.google.com/document/d/1zK72f4976JqzYTEKphjVg7lquSYfM-ySSQ8iOEcGZks/edit?usp=sharing" target="_blank" rel="noopener">Read Sample</a>
     </div>
-
+ 
     <div class="work-card reveal" data-category="podcast">
       <div class="work-tag">Podcast Script · Culture / History</div>
       <div class="work-title">The Siddi Community — India's Forgotten African Tribe</div>
       <div class="work-desc">A full-length interview-style podcast script exploring the 400-year history of the Siddis — their African roots, cultural survival, invisibility in mainstream discourse, and uncertain future.</div>
       <a class="work-link" href="https://docs.google.com/document/d/17CCie4rKSp7h6pZ_D_inEqvCfa9l0TvqDifq--pvkNw/edit?usp=sharing" target="_blank" rel="noopener">Read Sample</a>
     </div>
-
+ 
     <div class="work-card reveal" data-category="blog">
       <div class="work-tag">Travel Blog · Lifestyle</div>
       <div class="work-title">Coorg — India's Best Kept Secret</div>
-      <div class="work-desc">A long-form destination guide to Karnataka's most beloved hill district blending personal narrative, local insights, and practical travel tips.</div>
+      <div class="work-desc">A long-form destination guide to Karnataka's most beloved hill district — blending personal narrative, local insights, and practical travel tips.</div>
       <a class="work-link" href="https://docs.google.com/document/d/1ibId2OREcR-F1cgaMePlkVnAMj4EcXxZ/edit?usp=sharing" target="_blank" rel="noopener">Read Sample</a>
     </div>
-
+ 
     <div class="work-card reveal" data-category="blog">
       <div class="work-tag">Travel Blog · Personal Story</div>
       <div class="work-title">Five Idiots and a Dented Car — Pondicherry</div>
       <div class="work-desc">A humorous, chaotic travel story: five friends, a rental car scratch, quicksand, beer at a state border, and one bed for five in Auroville.</div>
       <a class="work-link" href="https://docs.google.com/document/d/1a-Y4ksJuiLr_YQeB4ywzun6eBY1WP7Py/edit?usp=drive_link" target="_blank" rel="noopener">Read Sample</a>
     </div>
-
+ 
     <div class="work-card reveal" data-category="blog">
       <div class="work-tag">Personal Essay · Medium</div>
       <div class="work-title">The Responsibility of Friendship</div>
       <div class="work-desc">A reflection on maturity, boundaries, and what it really means to show up for the people you care about.</div>
       <a class="work-link" href="https://docs.google.com/document/d/1R9qPiLzmXCfoY3uLwsW0GF7yErX8W-WJ3V0qWu8meFg/edit?usp=sharing" target="_blank" rel="noopener">Read Article</a>
     </div>
-
+ 
     <div class="work-card reveal" data-category="blog">
       <div class="work-tag">Personal Essay · Film Analysis</div>
       <div class="work-title">What the Whale Made Me Feel</div>
-      <div class="work-desc">A film analysis of Aronofsky's "The Whale" exploring guilt, emotional avoidance, and what it means to want to be seen before it's too late.</div>
+      <div class="work-desc">A film analysis of Aronofsky's "The Whale" — exploring guilt, emotional avoidance, and what it means to want to be seen before it's too late.</div>
       <a class="work-link" href="https://docs.google.com/document/d/1A3UdoaQZmt9fHenCsIMyJ46xtBGfNxZ9sItMvTWCIjk/edit?usp=sharing" target="_blank" rel="noopener">Read Article</a>
     </div>
-
+ 
   </div>
 </section>
-
+ 
 <section id="experience">
   <div class="section-label">Experience</div>
   <h2>Where I've <em>Worked</em></h2>
   <div class="exp-grid">
-
+ 
+    <div class="exp-item reveal">
+      <div class="exp-period">Jan 2026 —<br>Present</div>
+      <div class="exp-content">
+        <div class="exp-title">Scriptwriter — No Guidebook</div>
+        <div class="exp-org">YouTube Personal Growth Channel</div>
+        <ul class="exp-bullets">
+          <li>Writing all scripts for an active personal essay YouTube channel (8+ scripts, ongoing)</li>
+          <li>Specialising in confessional, autobiographical video essays built around the creator's real experiences</li>
+          <li>Developing a consistent voice and narrative framework across the channel's content</li>
+        </ul>
+      </div>
+    </div>
+ 
     <div class="exp-item reveal">
       <div class="exp-period">Jan 2026 —<br>Present</div>
       <div class="exp-content">
@@ -650,7 +927,7 @@
         </ul>
       </div>
     </div>
-
+ 
     <div class="exp-item reveal">
       <div class="exp-period">Oct 2025 —<br>Present</div>
       <div class="exp-content">
@@ -663,15 +940,15 @@
         </ul>
       </div>
     </div>
-
+ 
   </div>
 </section>
-
+ 
 <section id="contact">
   <div>
     <div class="section-label">Get In Touch</div>
     <h2 class="contact-headline">Let's Work <em>Together.</em></h2>
-    <p class="contact-note">Open to freelance projects, long-term clients, and collaborations. Scripts, articles, investigative pieces let's talk.</p>
+    <p class="contact-note">Open to freelance projects, long-term collaborations, and ongoing channel partnerships. Documentary scripts, personal essays, investigative pieces — let's talk.</p>
   </div>
   <div class="contact-links reveal">
     <a href="mailto:likhith200315@gmail.com" class="contact-link-item">
@@ -697,12 +974,12 @@
     </a>
   </div>
 </section>
-
+ 
 <footer>
   <span class="footer-copy">© 2026 Likhith D Kunder</span>
-  <span class="footer-tag">Content Writer · Scriptwriter · India</span>
+  <span class="footer-tag">Documentary · Personal Essay · Scriptwriter</span>
 </footer>
-
+ 
 <script>
   // Scroll reveal
   const observer = new IntersectionObserver((entries) => {
@@ -714,7 +991,7 @@
     });
   }, { threshold: 0.08 });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
+ 
   // Work filter
   document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
